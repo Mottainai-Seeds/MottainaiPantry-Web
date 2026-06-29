@@ -1,92 +1,120 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Mottainai Pantry</title>
-  <meta name="description" content="Mottainai Pantry のプライバシーポリシーです。">
-  <meta property="og:title" content="Privacy Policy | Mottainai Pantry">
-  <meta property="og:description" content="Mottainai Pantry のプライバシーポリシーです。">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html">
-        <img src="images/app_icon.png" alt="" aria-hidden="true">
-        <span>Mottainai Pantry</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="download.html">Download</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="support.html">Support</a>
-        <a href="faq.html">FAQ</a>
-        <a href="changelog.html">Changelog</a>
-      </nav>
-    </div>
-  </header>
+# 🍽️ Mottainai Pantry
 
-  <main>
-    <div class="logo-block">
-      <img src="images/app_logo.png" alt="Mottainai Pantry">
-    </div>
+<p align="center">
+  <img src="images/app_logo.png" alt="Mottainai Pantry" width="520">
+</p>
 
-    <h1 class="page-title">プライバシーポリシー</h1>
-    <p class="note">最終更新日：2026年6月29日</p>
+<p align="center">
+食品ロスを減らすためのシンプルで使いやすいAndroidアプリ
+</p>
 
-    <section class="card">
-      <h2>1. 保存される情報</h2>
-      <p>本アプリでは、食材情報、レシピ情報、履歴、統計、各種設定、通知設定、AI利用設定を端末内に保存します。これらの情報は原則としてサーバーへ送信されません。</p>
-    </section>
+---
 
-    <section class="card">
-      <h2>2. AI APIキー</h2>
-      <p>AI機能を利用する場合、利用者自身が取得したOpenAIまたはGoogle GeminiのAPIキーを使用します。</p>
-      <p>APIキーはAndroid Keystoreを利用して端末内に暗号化保存されます。開発者がAPIキーを取得・閲覧・保存することはありません。</p>
-    </section>
+## 📱 アプリ概要
 
-    <section class="card">
-      <h2>3. 外部サービスへの送信</h2>
-      <p>AIレシピ生成時には、食材名やレシピ生成に必要な入力内容がOpenAIまたはGoogle Geminiへ送信される場合があります。</p>
-      <p>各サービスの利用規約およびプライバシーポリシーは、それぞれの提供元に従います。</p>
-    </section>
+**Mottainai Pantry** は、家庭内の食材を管理し、賞味期限切れや食品ロスを減らすことを目的としたアプリです。
 
-    <section class="card">
-      <h2>4. 収集しない情報</h2>
-      <ul>
-        <li>氏名</li>
-        <li>電話番号</li>
-        <li>位置情報</li>
-        <li>連絡先</li>
-        <li>広告ID</li>
-      </ul>
-    </section>
+日々の「もったいない」を少しずつ減らし、
 
-    <section class="card">
-      <h2>5. バックアップ</h2>
-      <p>CSVやJSONバックアップファイルは利用者自身の責任で管理してください。</p>
-    </section>
+> **「食材を最後までおいしく使い切る」**
 
-    <section class="card">
-      <h2>6. 広告・課金</h2>
-      <p>現在、本アプリでは広告を表示していません。SupporterおよびPremiumは将来的に提供予定です。</p>
-    </section>
+そんな暮らしをサポートします。
 
-    <section class="card">
-      <h2>7. お問い合わせ</h2>
-      <p><a href="mailto:meke625@gmail.com">meke625@gmail.com</a></p>
-    </section>
+---
 
-  </main>
+## ✨ 主な機能
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      © 2026 Mottainai Project. Mottainai Pantry is currently in pre-release alpha testing.
-    </div>
-  </footer>
-</body>
-</html>
+- 🥬 食材管理
+- 📅 賞味期限・消費期限管理
+- 📷 賞味期限撮影（OCR）
+- 📦 バーコード登録
+- 🤖 AIレシピ提案（OpenAI / Gemini）
+- 📊 フードロス統計
+- ⭐ お気に入りレシピ
+- 💾 CSVバックアップ・復元
+- 🔒 Android KeystoreによるAPIキー暗号化保存
+
+---
+
+# 📷 スクリーンショット
+
+|オンボーディング|ホーム|
+|---|---|
+|<img src="images/screenshot01.png" width="260">|<img src="images/screenshot02.png" width="260">|
+
+|AIレシピ提案|統計|
+|---|---|
+|<img src="images/screenshot03.png" width="260">|<img src="images/screenshot04.png" width="260">|
+
+---
+
+# 🔒 プライバシー
+
+AI機能を利用する場合は、
+
+**ユーザー自身が取得したAPIキー**
+
+を設定画面から登録します。
+
+APIキーは
+
+- Android Keystore
+- AES-GCM
+
+により端末内へ暗号化保存されます。
+
+開発者がAPIキーや食材情報を収集することはありません。
+
+---
+
+# 📄 各種ページ
+
+- 🏠 Home
+  - https://shota625.github.io/MottainaiPantry-Web/
+
+- 📖 About
+  - https://shota625.github.io/MottainaiPantry-Web/about.html
+
+- 🔒 Privacy Policy
+  - https://shota625.github.io/MottainaiPantry-Web/privacy.html
+
+- 📜 Terms of Service
+  - https://shota625.github.io/MottainaiPantry-Web/terms.html
+
+- ❓ FAQ
+  - https://shota625.github.io/MottainaiPantry-Web/faq.html
+
+- 💬 Support
+  - https://shota625.github.io/MottainaiPantry-Web/support.html
+
+- 📥 Download
+  - https://shota625.github.io/MottainaiPantry-Web/download.html
+
+- 📝 Changelog
+  - https://shota625.github.io/MottainaiPantry-Web/changelog.html
+
+---
+
+# 🚀 Google Play
+
+現在公開準備中です。
+
+公開後はこちらへ掲載予定です。
+
+Coming Soon...
+
+---
+
+# 📧 Contact
+
+ご意見・ご要望・不具合報告は
+
+Supportページよりお願いいたします。
+
+---
+
+# © License
+
+Copyright © 2026 Mottainai Pantry
+
+All Rights Reserved.
