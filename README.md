@@ -40,11 +40,11 @@
 
 |オンボーディング|ホーム|
 |---|---|
-|<img src="images/screenshot01.png" width="260">|<img src="images/screenshot02.png" width="260">|
+|<img src="images/screenshot01_onboarding" width="260">|<img src="images/screenshot02_home" width="260">|
 
 |AIレシピ提案|統計|
 |---|---|
-|<img src="images/screenshot03.png" width="260">|<img src="images/screenshot04.png" width="260">|
+|<img src="images/screenshot03_ai_recipe" width="260">|<img src="images/screenshot04_statistics" width="260">|
 
 ---
 
