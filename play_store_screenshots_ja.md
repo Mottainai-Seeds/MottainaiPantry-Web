@@ -4,7 +4,7 @@ Screenshot 1
 
 ファイル名
 
-screenshot_01_onboarding.png
+screenshot01_onboarding.png
 
 タイトル
 
@@ -18,7 +18,7 @@ Screenshot 2
 
 ファイル名
 
-screenshot_02_home.png
+screenshot02_home.png
 
 タイトル
 
@@ -32,7 +32,7 @@ Screenshot 3
 
 ファイル名
 
-screenshot_03_recipe.png
+screenshot03_ai_recipe.png
 
 タイトル
 
@@ -49,7 +49,7 @@ Screenshot 4
 
 ファイル名
 
-screenshot_04_statistics.png
+screenshot04_statistics.png
 
 タイトル
 
