@@ -2,6 +2,7 @@
   --primary: #69C27D;
   --primary-dark: #2F7A46;
   --accent: #F7B955;
+  --brown: #6B5344;
   --text: #2F3437;
   --muted: #6B7280;
   --bg: #FAFCFA;
@@ -31,10 +32,10 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(105, 194, 125, 0.16), transparent 34rem),
-    radial-gradient(circle at top right, rgba(247, 185, 85, 0.18), transparent 30rem),
+    radial-gradient(circle at top left, rgba(105, 194, 125, 0.12), transparent 36rem),
+    radial-gradient(circle at top right, rgba(247, 185, 85, 0.14), transparent 32rem),
     var(--bg);
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 a {
@@ -52,13 +53,13 @@ button:focus-visible {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
 
 .header-inner {
-  max-width: 1120px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 16px 24px;
   display: flex;
@@ -71,9 +72,10 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--text);
+  color: var(--brown);
   text-decoration: none;
   font-weight: 900;
+  flex-shrink: 0;
 }
 
 .brand img {
@@ -86,13 +88,13 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 14px;
+  gap: 10px 14px;
 }
 
 .nav a {
   color: var(--muted);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -109,12 +111,12 @@ button:focus-visible {
 main {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 42px 24px 64px;
+  padding: 48px 24px 72px;
 }
 
 .logo-block {
   text-align: center;
-  margin: 18px 0 32px;
+  margin: 18px 0 36px;
 }
 
 .logo-block img,
@@ -122,6 +124,28 @@ main {
   max-width: 520px;
   width: min(100%, 520px);
   height: auto;
+}
+
+.hero-brand {
+  text-align: center;
+  padding: 56px 0 48px;
+}
+
+.hero-brand .hero-card {
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 32px;
+  padding: 48px 36px;
+}
+
+.hero-brand h1 {
+  color: var(--primary-dark);
+}
+
+.hero-brand .lead {
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero {
@@ -135,7 +159,8 @@ main {
 .hero-card,
 .card,
 .feature-card,
-.screenshot-card {
+.screenshot-card,
+.character-card {
   background: var(--card);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -183,6 +208,11 @@ main {
   font-weight: 900;
 }
 
+.badge-app {
+  background: rgba(247, 185, 85, 0.22);
+  color: #7C4A03;
+}
+
 h1 {
   margin: 16px 0 10px;
   font-size: clamp(32px, 5vw, 54px);
@@ -200,14 +230,20 @@ h2 {
   line-height: 1.35;
 }
 
+.section-intro {
+  margin-top: 0;
+}
+
 .card h2:first-child,
-.faq-item h2 {
+.faq-item h2,
+.character-card h2 {
   margin-top: 0;
 }
 
 h3 {
   margin-top: 24px;
   font-size: 20px;
+  color: var(--brown);
 }
 
 .lead,
@@ -223,31 +259,60 @@ h3 {
 
 .card {
   border-radius: 22px;
-  padding: 26px;
-  margin: 22px 0;
+  padding: 28px;
+  margin: 28px 0;
 }
 
 .legal-prose p + p {
   margin-top: 1rem;
 }
 
-.feature-grid {
+.meta-line {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.feature-grid,
+.character-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.feature-grid.four-col {
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
 }
 
-.feature-card {
+.feature-card,
+.character-card {
   border-radius: 20px;
-  padding: 22px;
+  padding: 24px;
 }
 
-.feature-card .icon {
-  font-size: 30px;
+.feature-card .icon,
+.character-card .char-icon {
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.character-card .role {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+  margin: 4px 0 10px;
+}
+
+.character-card p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 15px;
 }
 
 .screenshot-section {
-  margin-top: 42px;
+  margin-top: 48px;
 }
 
 .screenshot-gallery,
@@ -285,19 +350,20 @@ h3 {
 .button-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .button {
   display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: 12px 20px;
+  background: var(--accent);
+  color: #3D2E12;
+  padding: 13px 22px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 900;
-  box-shadow: 0 8px 20px rgba(105, 194, 125, 0.28);
+  box-shadow: 0 8px 20px rgba(247, 185, 85, 0.35);
 }
 
 .button.secondary {
@@ -307,8 +373,15 @@ h3 {
   box-shadow: none;
 }
 
+.button.green {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 8px 20px rgba(105, 194, 125, 0.28);
+}
+
 .button.is-disabled {
   background: var(--muted);
+  color: white;
   box-shadow: none;
   cursor: not-allowed;
   pointer-events: none;
@@ -353,7 +426,7 @@ hr {
 .footer-inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 26px 24px;
+  padding: 32px 24px;
   color: var(--muted);
   font-size: 14px;
 }
@@ -362,11 +435,17 @@ hr {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .footer-nav a {
   font-size: 14px;
+}
+
+.footer-tagline {
+  color: var(--brown);
+  font-weight: 700;
+  margin: 0 0 8px;
 }
 
 @media (max-width: 960px) {
@@ -375,9 +454,13 @@ hr {
     padding-top: 28px;
   }
 
-  .feature-grid,
+  .feature-grid.four-col,
   .screenshot-gallery,
   .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .character-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -393,16 +476,19 @@ hr {
   }
 
   main {
-    padding: 28px 18px 50px;
+    padding: 32px 18px 56px;
   }
 
   .hero-card,
-  .hero-visual {
+  .hero-visual,
+  .hero-brand .hero-card {
     border-radius: 22px;
-    padding: 24px;
+    padding: 28px 22px;
   }
 
   .feature-grid,
+  .feature-grid.four-col,
+  .character-grid,
   .screenshot-gallery,
   .screenshot-grid {
     grid-template-columns: 1fr;
