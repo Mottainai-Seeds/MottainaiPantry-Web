@@ -671,6 +671,7 @@
     @media (min-width: 761px) {
       .cm-stage {
         min-height: 680px;
+        max-height: none;
       }
 
       .cm-title {
@@ -681,8 +682,45 @@
         min-height: 300px;
       }
 
+      .unite-scene {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        transform: translateY(-8px);
+      }
+
+      .unite-scene .cm-label {
+        margin: 0 0 6px;
+      }
+
+      .unite-scene .cm-title {
+        font-size: clamp(32px, 4vw, 50px);
+        line-height: 1.08;
+        max-width: 16em;
+        margin: 0 auto;
+      }
+
       .ring-team {
-        width: min(44vw, 420px);
+        width: min(30vw, 300px);
+        margin-top: 10px;
+      }
+
+      .ring-team .cm-character {
+        width: clamp(48px, 5.8vw, 68px);
+      }
+
+      .ring-team .c1 { top: -5%; }
+      .ring-team .c2 { right: 1%; top: 23%; }
+      .ring-team .c3 { right: 13%; bottom: 1%; }
+      .ring-team .c4 { left: 13%; bottom: 1%; }
+      .ring-team .c5 { left: 1%; top: 23%; }
+      .ring-team .c6 { top: 38%; width: clamp(54px, 6.4vw, 76px); }
+
+      .future-seed {
+        width: clamp(58px, 6.6vw, 82px);
+        border-width: 5px;
       }
     }
 
@@ -938,66 +976,6 @@
         height: 620px;
         min-height: 620px;
         max-height: 620px;
-      }
-    }
-
-
-    /* Desktop polish: prevent the ring scene from being clipped and keep each scene balanced. */
-    @media (min-width: 761px) {
-      .cm-stage {
-        height: 720px;
-        min-height: 720px;
-        max-height: none;
-      }
-
-      .cm-scene {
-        padding: clamp(28px, 3.2vw, 48px);
-      }
-
-      .cm-title {
-        font-size: clamp(32px, 4.4vw, 56px);
-      }
-
-      .unite-scene {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .unite-scene .cm-label {
-        margin: 0;
-      }
-
-      .unite-scene .cm-title {
-        font-size: clamp(34px, 4vw, 52px);
-        line-height: 1.12;
-        max-width: 14em;
-        margin-inline: auto;
-      }
-
-      .ring-team {
-        width: min(36vw, 360px);
-        margin-top: 12px;
-      }
-
-      .ring-team .cm-character {
-        width: clamp(56px, 6.5vw, 82px);
-      }
-
-      .ring-team .c1 { top: -3%; }
-      .ring-team .c2 { right: 0; top: 24%; }
-      .ring-team .c3 { right: 12%; bottom: 2%; }
-      .ring-team .c4 { left: 12%; bottom: 2%; }
-      .ring-team .c5 { left: 0; top: 24%; }
-      .ring-team .c6 {
-        top: 38%;
-        width: clamp(62px, 7vw, 88px);
-      }
-
-      .future-seed {
-        width: clamp(68px, 7vw, 96px);
-        border-width: 6px;
       }
     }
 
