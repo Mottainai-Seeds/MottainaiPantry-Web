@@ -18,6 +18,7 @@ https://shota625.github.io/MottainaiPantry-Web/
 
 - [Home](index.html)
 - [About](about.html)
+- [CM](cm.html)
 - [Download](download.html)
 - [Privacy Policy](privacy.html)
 - [Terms](terms.html)

@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mottainai Seeds | CM</title>
+  <meta name="description" content="Mottainai Seedsの理念から、キャラクターたちが世界のもったいないに気づき、未来へ団結するCMです。">
+  <link rel="canonical" href="https://shota625.github.io/MottainaiPantry-Web/cm.html">
+  <link rel="icon" href="images/Mottainai_Seeds_icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/Mottainai_Seeds_icon.png">
+  <meta property="og:title" content="Mottainai Seeds | CM">
+  <meta property="og:description" content="もったいないを、未来の種に。Mottainai Seedsのキャラクターたちが未来へ団結するCM。">
+  <meta property="og:type" content="video.other">
+  <meta property="og:url" content="https://shota625.github.io/MottainaiPantry-Web/cm.html">
+  <meta property="og:image" content="https://shota625.github.io/MottainaiPantry-Web/images/Mottainai_Seeds_logo.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@MottainaiSeeds">
+  <meta name="twitter:creator" content="@MottainaiSeeds">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --cm-green: #69C27D;
+      --cm-deep-green: #2F7A46;
+      --cm-orange: #F7B955;
+      --cm-blue: #6BB5D8;
+      --cm-rose: #F48778;
+      --cm-ink: #243036;
+      --cm-muted: #657178;
+      --cm-paper: #FFFDF7;
+      --cm-line: rgba(47, 122, 70, 0.18);
+      --cm-time: 32s;
+    }
+
+    body {
+      background:
+        linear-gradient(180deg, rgba(105, 194, 125, 0.13), rgba(255, 253, 247, 0.95) 42%),
+        var(--cm-paper);
+    }
+
+    .cm-page {
+      max-width: 1240px;
+      padding-top: 34px;
+    }
+
+    .cm-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .cm-stage {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      min-height: 420px;
+      border: 1px solid var(--cm-line);
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 16% 16%, rgba(247, 185, 85, 0.34), transparent 24%),
+        radial-gradient(circle at 82% 20%, rgba(107, 181, 216, 0.22), transparent 30%),
+        linear-gradient(135deg, #FFFFFF 0%, #F2FAF1 54%, #FFF2D4 100%);
+      box-shadow: 0 22px 56px rgba(36, 48, 54, 0.13);
+      color: var(--cm-ink);
+      isolation: isolate;
+    }
+
+    .cm-stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(47, 122, 70, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47, 122, 70, 0.08) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 72%);
+      opacity: 0.5;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .cm-stage::after {
+      content: "";
+      position: absolute;
+      inset: auto -6% -34% -6%;
+      height: 48%;
+      background: linear-gradient(180deg, rgba(105, 194, 125, 0), rgba(105, 194, 125, 0.25));
+      border-radius: 50% 50% 0 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .cm-scene {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: clamp(24px, 4vw, 56px);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      animation-duration: var(--cm-time);
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+    }
+
+    .cm-scene-1 { animation-name: cmScene1; }
+    .cm-scene-2 { animation-name: cmScene2; }
+    .cm-scene-3 { animation-name: cmScene3; }
+    .cm-scene-4 { animation-name: cmScene4; }
+    .cm-scene-5 { animation-name: cmScene5; }
+    .cm-scene-6 { animation-name: cmScene6; }
+
+    .cm-kicker,
+    .cm-label {
+      color: var(--cm-deep-green);
+      font-size: clamp(13px, 1.6vw, 18px);
+      font-weight: 900;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .cm-title {
+      margin: 10px 0 0;
+      color: var(--cm-deep-green);
+      font-size: clamp(34px, 6vw, 78px);
+      font-weight: 950;
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    .cm-copy {
+      margin: 18px 0 0;
+      max-width: 780px;
+      color: var(--cm-muted);
+      font-size: clamp(17px, 2.1vw, 27px);
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .cm-logo-lockup {
+      width: min(64%, 560px);
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      transform-origin: center;
+      animation: cmLogoPulse var(--cm-time) linear infinite both;
+    }
+
+    .cm-logo-lockup img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 18px 26px rgba(47, 122, 70, 0.16));
+    }
+
+    .seed-burst {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .seed-burst span {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50% 50% 50% 0;
+      background: var(--cm-orange);
+      opacity: 0;
+      animation: cmSeedFloat var(--cm-time) linear infinite both;
+    }
+
+    .seed-burst span:nth-child(1) { left: 20%; top: 28%; animation-delay: -1.2s; }
+    .seed-burst span:nth-child(2) { left: 75%; top: 22%; animation-delay: -0.4s; background: var(--cm-green); }
+    .seed-burst span:nth-child(3) { left: 30%; top: 72%; animation-delay: -2.1s; background: var(--cm-blue); }
+    .seed-burst span:nth-child(4) { left: 66%; top: 70%; animation-delay: -1.6s; background: var(--cm-rose); }
+    .seed-burst span:nth-child(5) { left: 48%; top: 17%; animation-delay: -2.8s; }
+
+    .cm-world {
+      width: min(94%, 900px);
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .cm-globe {
+      position: relative;
+      width: min(100%, 360px);
+      aspect-ratio: 1;
+      margin: 0 auto;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 34% 28%, #FFFFFF 0 8%, transparent 9%),
+        radial-gradient(circle at 44% 54%, rgba(255, 255, 255, 0.95) 0 9%, transparent 10%),
+        radial-gradient(circle at 62% 38%, rgba(255, 255, 255, 0.95) 0 12%, transparent 13%),
+        linear-gradient(145deg, #8BD9E8, #6FC885 62%, #F4C45F);
+      border: 10px solid rgba(255, 255, 255, 0.92);
+      box-shadow: 0 22px 48px rgba(47, 122, 70, 0.24);
+      animation: cmGlobeBreathe var(--cm-time) linear infinite both;
+    }
+
+    .cm-globe::before,
+    .cm-globe::after {
+      content: "";
+      position: absolute;
+      border: 2px solid rgba(255, 255, 255, 0.55);
+      border-radius: 50%;
+      inset: 18%;
+    }
+
+    .cm-globe::after {
+      inset: 0 42%;
+    }
+
+    .waste-token {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: clamp(58px, 8vw, 86px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: white;
+      border: 2px solid rgba(47, 122, 70, 0.18);
+      box-shadow: 0 12px 26px rgba(36, 48, 54, 0.14);
+      font-size: clamp(28px, 4vw, 44px);
+      animation: cmTokenOrbit var(--cm-time) linear infinite both;
+    }
+
+    .waste-token small {
+      position: absolute;
+      left: 50%;
+      bottom: -25px;
+      transform: translateX(-50%);
+      color: var(--cm-deep-green);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .token-food { left: -8%; top: 18%; }
+    .token-time { right: -10%; top: 24%; animation-delay: -0.25s; }
+    .token-idea { left: 29%; bottom: -10%; animation-delay: -0.5s; }
+
+    .cm-problem-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .problem-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      max-width: 100%;
+      padding: 10px 16px;
+      border: 1px solid rgba(47, 122, 70, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--cm-ink);
+      font-size: clamp(14px, 1.7vw, 19px);
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(36, 48, 54, 0.08);
+    }
+
+    .cm-characters {
+      width: min(96%, 920px);
+      text-align: center;
+    }
+
+    .character-line {
+      position: relative;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      gap: clamp(4px, 1.2vw, 16px);
+      min-height: clamp(170px, 28vw, 290px);
+      margin-top: clamp(18px, 3vw, 34px);
+    }
+
+    .cm-character {
+      position: relative;
+      width: clamp(92px, 13vw, 154px);
+      transform-origin: 50% 100%;
+      animation: cmCharacterRise var(--cm-time) linear infinite both;
+    }
+
+    .cm-character img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 18px rgba(36, 48, 54, 0.17));
+    }
+
+    .cm-character strong {
+      position: absolute;
+      left: 50%;
+      bottom: -34px;
+      transform: translateX(-50%);
+      width: max-content;
+      max-width: 130px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.93);
+      color: var(--cm-deep-green);
+      font-size: 12px;
+      line-height: 1.2;
+      box-shadow: 0 8px 18px rgba(36, 48, 54, 0.1);
+    }
+
+    .cm-character:nth-child(2) { animation-delay: -0.15s; }
+    .cm-character:nth-child(3) { animation-delay: -0.3s; }
+    .cm-character:nth-child(4) { animation-delay: -0.45s; }
+    .cm-character:nth-child(5) { animation-delay: -0.6s; }
+    .cm-character:nth-child(6) { animation-delay: -0.75s; }
+
+    .mission-map {
+      width: min(94%, 980px);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .mission-card {
+      min-height: 128px;
+      padding: 16px;
+      border: 1px solid rgba(47, 122, 70, 0.18);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 12px 26px rgba(36, 48, 54, 0.09);
+      text-align: left;
+      animation: cmMissionPop var(--cm-time) linear infinite both;
+    }
+
+    .mission-card:nth-child(2) { animation-delay: -0.16s; }
+    .mission-card:nth-child(3) { animation-delay: -0.32s; }
+    .mission-card:nth-child(4) { animation-delay: -0.48s; }
+    .mission-card:nth-child(5) { animation-delay: -0.64s; }
+    .mission-card:nth-child(6) { animation-delay: -0.8s; }
+
+    .mission-card h3 {
+      margin: 0;
+      color: var(--cm-deep-green);
+      font-size: clamp(17px, 2vw, 23px);
+      line-height: 1.2;
+    }
+
+    .mission-card p {
+      margin: 8px 0 0;
+      color: var(--cm-muted);
+      font-size: clamp(13px, 1.35vw, 16px);
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .unite-scene {
+      width: min(96%, 980px);
+      text-align: center;
+    }
+
+    .ring-team {
+      position: relative;
+      width: min(60vw, 500px);
+      aspect-ratio: 1;
+      margin: 26px auto 0;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(255, 255, 255, 0.96) 0 28%, rgba(105, 194, 125, 0.14) 29% 56%, transparent 57%),
+        conic-gradient(from 12deg, rgba(105, 194, 125, 0.24), rgba(247, 185, 85, 0.34), rgba(107, 181, 216, 0.26), rgba(105, 194, 125, 0.24));
+      box-shadow: inset 0 0 0 1px rgba(47, 122, 70, 0.16);
+      animation: cmRingPulse var(--cm-time) linear infinite both;
+    }
+
+    .ring-team .cm-character {
+      position: absolute;
+      width: clamp(70px, 11vw, 118px);
+      margin: 0;
+      animation-name: cmRingCharacter;
+    }
+
+    .ring-team .cm-character strong {
+      display: none;
+    }
+
+    .ring-team .c1 { left: 50%; top: -6%; transform: translateX(-50%); }
+    .ring-team .c2 { right: 2%; top: 23%; }
+    .ring-team .c3 { right: 14%; bottom: 0; }
+    .ring-team .c4 { left: 14%; bottom: 0; }
+    .ring-team .c5 { left: 2%; top: 23%; }
+    .ring-team .c6 { left: 50%; top: 37%; transform: translateX(-50%); }
+
+    .future-seed {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: clamp(78px, 11vw, 132px);
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      border-radius: 55% 55% 55% 0;
+      background: linear-gradient(145deg, #FFFFFF, #F7B955 52%, #69C27D);
+      border: 8px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 36px rgba(47, 122, 70, 0.24);
+    }
+
+    .pantry-scene {
+      width: min(96%, 980px);
+      display: grid;
+      grid-template-columns: 0.98fr 1.02fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .pantry-brand {
+      text-align: left;
+    }
+
+    .pantry-logo {
+      width: min(100%, 440px);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 14px 22px rgba(47, 122, 70, 0.14));
+    }
+
+    .phone-stack {
+      position: relative;
+      min-height: clamp(280px, 36vw, 392px);
+    }
+
+    .phone-shot {
+      position: absolute;
+      width: clamp(120px, 18vw, 190px);
+      border-radius: 20px;
+      background: white;
+      padding: 8px;
+      box-shadow: 0 18px 34px rgba(36, 48, 54, 0.18);
+      transform-origin: 50% 90%;
+      animation: cmPhoneFloat var(--cm-time) linear infinite both;
+    }
+
+    .phone-shot img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+
+    .phone-shot-1 { left: 0; top: 24px; transform: rotate(-7deg); }
+    .phone-shot-2 { left: 28%; top: 0; transform: rotate(4deg); animation-delay: -0.35s; }
+    .phone-shot-3 { right: 0; top: 46px; transform: rotate(8deg); animation-delay: -0.7s; }
+
+    .cm-button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .cm-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: var(--cm-orange);
+      color: #3D2E12;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 950;
+      line-height: 1.2;
+      box-shadow: 0 10px 22px rgba(247, 185, 85, 0.35);
+    }
+
+    .cm-cta.secondary {
+      background: #FFFFFF;
+      color: var(--cm-deep-green);
+      border: 1px solid var(--cm-line);
+      box-shadow: none;
+    }
+
+    .cm-controls {
+      display: grid;
+      gap: 14px;
+      border: 1px solid var(--cm-line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 18px;
+      box-shadow: 0 16px 32px rgba(36, 48, 54, 0.08);
+    }
+
+    .cm-controls h1 {
+      margin: 0;
+      color: var(--cm-deep-green);
+      font-size: 25px;
+      line-height: 1.18;
+    }
+
+    .cm-controls p {
+      margin: 0;
+      color: var(--cm-muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .cm-action {
+      width: 100%;
+      min-height: 44px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--cm-deep-green);
+      color: white;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .cm-action.secondary {
+      background: white;
+      color: var(--cm-deep-green);
+      border: 1px solid var(--cm-line);
+    }
+
+    .cm-shot-list {
+      display: grid;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      color: var(--cm-muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .cm-shot-list li {
+      margin: 0;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: rgba(105, 194, 125, 0.08);
+    }
+
+    .cm-progress {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.55);
+      z-index: 3;
+    }
+
+    .cm-progress::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform-origin: 0 50%;
+      background: linear-gradient(90deg, var(--cm-green), var(--cm-orange), var(--cm-blue));
+      animation: cmProgress var(--cm-time) linear infinite both;
+    }
+
+    .is-paused,
+    .is-paused * {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes cmScene1 {
+      0%, 14.5% { opacity: 1; transform: translateY(0); }
+      16%, 100% { opacity: 0; transform: translateY(-16px); }
+    }
+
+    @keyframes cmScene2 {
+      0%, 16% { opacity: 0; transform: translateY(18px); }
+      17.5%, 31% { opacity: 1; transform: translateY(0); }
+      32.5%, 100% { opacity: 0; transform: translateY(-14px); }
+    }
+
+    @keyframes cmScene3 {
+      0%, 32.5% { opacity: 0; transform: translateY(18px); }
+      34%, 48% { opacity: 1; transform: translateY(0); }
+      49.5%, 100% { opacity: 0; transform: translateY(-14px); }
+    }
+
+    @keyframes cmScene4 {
+      0%, 49.5% { opacity: 0; transform: translateY(18px); }
+      51%, 65% { opacity: 1; transform: translateY(0); }
+      66.5%, 100% { opacity: 0; transform: translateY(-14px); }
+    }
+
+    @keyframes cmScene5 {
+      0%, 66.5% { opacity: 0; transform: translateY(18px); }
+      68%, 81.5% { opacity: 1; transform: translateY(0); }
+      83%, 100% { opacity: 0; transform: translateY(-14px); }
+    }
+
+    @keyframes cmScene6 {
+      0%, 83% { opacity: 0; transform: translateY(18px); }
+      84.5%, 100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes cmLogoPulse {
+      0%, 14% { transform: scale(0.94); opacity: 0.96; }
+      5%, 13% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes cmSeedFloat {
+      0%, 2% { transform: translate3d(0, 18px, 0) scale(0.4) rotate(0deg); opacity: 0; }
+      5%, 14% { opacity: 0.75; }
+      16%, 100% { transform: translate3d(0, -56px, 0) scale(1) rotate(70deg); opacity: 0; }
+    }
+
+    @keyframes cmGlobeBreathe {
+      18%, 32% { transform: scale(1) rotate(0deg); }
+      22%, 29% { transform: scale(1.04) rotate(3deg); }
+    }
+
+    @keyframes cmTokenOrbit {
+      18%, 32% { transform: translateY(0) scale(1); opacity: 1; }
+      20%, 30% { transform: translateY(-10px) scale(1.04); opacity: 1; }
+      0%, 15%, 35%, 100% { opacity: 0; }
+    }
+
+    @keyframes cmCharacterRise {
+      35%, 49% { transform: translateY(0) scale(1); opacity: 1; }
+      38%, 46% { transform: translateY(-14px) scale(1.03); opacity: 1; }
+      0%, 32%, 52%, 100% { opacity: 0; }
+    }
+
+    @keyframes cmMissionPop {
+      52%, 66% { transform: translateY(0) scale(1); opacity: 1; }
+      54%, 63% { transform: translateY(-5px) scale(1.015); opacity: 1; }
+      0%, 49%, 69%, 100% { opacity: 0; }
+    }
+
+    @keyframes cmRingPulse {
+      69%, 82% { transform: scale(1); opacity: 1; }
+      72%, 79% { transform: scale(1.04); opacity: 1; }
+      0%, 66%, 85%, 100% { opacity: 0; }
+    }
+
+    @keyframes cmRingCharacter {
+      69%, 82% { opacity: 1; filter: saturate(1); }
+      72%, 79% { opacity: 1; filter: saturate(1.06); }
+      0%, 66%, 85%, 100% { opacity: 0; }
+    }
+
+    @keyframes cmPhoneFloat {
+      85%, 100% { opacity: 1; }
+      88%, 97% { translate: 0 -8px; }
+      0%, 82% { opacity: 0; }
+    }
+
+    @keyframes cmProgress {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    @media (max-width: 980px) {
+      .cm-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .cm-stage {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .cm-page {
+        padding-inline: 14px;
+      }
+
+      .cm-stage {
+        aspect-ratio: 9 / 16;
+        min-height: 640px;
+      }
+
+      .cm-scene {
+        padding: 28px 18px;
+      }
+
+      .cm-logo-lockup {
+        width: min(92%, 420px);
+      }
+
+      .cm-world,
+      .pantry-scene {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        text-align: center;
+      }
+
+      .cm-globe {
+        width: min(68vw, 244px);
+        border-width: 8px;
+      }
+
+      .waste-token {
+        width: 54px;
+        font-size: 27px;
+      }
+
+      .waste-token small {
+        bottom: -18px;
+        font-size: 10px;
+      }
+
+      .cm-title {
+        font-size: clamp(28px, 8vw, 42px);
+        line-height: 1.08;
+      }
+
+      .cm-copy {
+        font-size: clamp(15px, 4.3vw, 19px);
+      }
+
+      .cm-problem-list {
+        gap: 9px;
+        margin-top: 14px;
+      }
+
+      .problem-pill {
+        padding: 8px 13px;
+        font-size: 13px;
+      }
+
+      .pantry-brand {
+        text-align: center;
+      }
+
+      .pantry-logo {
+        width: min(78%, 270px);
+        margin-inline: auto;
+      }
+
+      .cm-problem-list {
+        justify-items: center;
+      }
+
+      .character-line {
+        flex-wrap: wrap;
+        align-content: center;
+        min-height: 350px;
+      }
+
+      .cm-character {
+        width: 92px;
+      }
+
+      .mission-map {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .mission-card {
+        min-height: auto;
+        padding: 9px;
+        text-align: center;
+      }
+
+      .mission-card h3 {
+        font-size: 15px;
+      }
+
+      .mission-card p {
+        margin-top: 5px;
+        font-size: 11px;
+        line-height: 1.36;
+      }
+
+      .ring-team {
+        width: min(92vw, 410px);
+      }
+
+      .phone-stack {
+        min-height: 190px;
+      }
+
+      .phone-shot {
+        width: clamp(92px, 26vw, 126px);
+        padding: 6px;
+      }
+
+      .cm-button-row {
+        justify-content: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cm-scene,
+      .seed-burst span,
+      .cm-logo-lockup,
+      .cm-globe,
+      .waste-token,
+      .cm-character,
+      .mission-card,
+      .ring-team,
+      .phone-shot,
+      .cm-progress::before {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .cm-scene-6 {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/Mottainai_Seeds_icon.png" alt="" width="38" height="38" aria-hidden="true">
+        <span>Mottainai Seeds</span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="characters.html">Characters</a>
+        <a href="cm.html" aria-current="page">CM</a>
+        <a href="pantry.html">Pantry</a>
+        <a href="download.html">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cm-page">
+    <div class="cm-shell">
+      <section class="cm-stage" id="cmStage" aria-label="Mottainai Seeds CM動画">
+        <div class="seed-burst" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <article class="cm-scene cm-scene-1">
+          <div class="cm-logo-lockup">
+            <img src="images/Mottainai_Seeds_logo.png" alt="Mottainai Seeds">
+            <p class="cm-kicker">Mottainai Seeds</p>
+            <h2 class="cm-title">もったいないを、未来の種に。</h2>
+            <p class="cm-copy">小さな気づきから、暮らしは少しずつ変えられる。</p>
+          </div>
+        </article>
+
+        <article class="cm-scene cm-scene-2">
+          <div class="cm-world">
+            <div class="cm-globe" aria-hidden="true">
+              <div class="waste-token token-food">🍅<small>食べもの</small></div>
+              <div class="waste-token token-time">⏳<small>時間</small></div>
+              <div class="waste-token token-idea">💡<small>アイデア</small></div>
+            </div>
+            <div>
+              <p class="cm-label">世界のあちこちにある「もったいない」</p>
+              <h2 class="cm-title">まだ活かせる価値が、見過ごされている。</h2>
+              <div class="cm-problem-list">
+                <span class="problem-pill">食べられる食材が捨てられる</span>
+                <span class="problem-pill">使えるものが眠ったままになる</span>
+                <span class="problem-pill">やさしい行動が続かない</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cm-scene cm-scene-3">
+          <div class="cm-characters">
+            <p class="cm-label">その気づきに、6人のたねもりが立ち上がる。</p>
+            <h2 class="cm-title">見つける。つなぐ。食べきる。活かす。応援する。育てる。</h2>
+            <div class="character-line" aria-label="Mottainai Seedsのキャラクター">
+              <div class="cm-character"><img src="images/Motta.png" alt="モッタくん"><strong>モッタくん</strong></div>
+              <div class="cm-character"><img src="images/Tsunagu.png" alt="ツナグくん"><strong>ツナグくん</strong></div>
+              <div class="cm-character"><img src="images/Taberun.png" alt="タベルンくん"><strong>タベルンくん</strong></div>
+              <div class="cm-character"><img src="images/Ikasu.png" alt="イカス博士"><strong>イカス博士</strong></div>
+              <div class="cm-character"><img src="images/Nanaeru.png" alt="ナナエルちゃん"><strong>ナナエルちゃん</strong></div>
+              <div class="cm-character"><img src="images/Iroha.png" alt="イロハちゃん"><strong>イロハちゃん</strong></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cm-scene cm-scene-4">
+          <div>
+            <p class="cm-label">それぞれの力で、もったいないを未来へ変える。</p>
+            <div class="mission-map">
+              <section class="mission-card">
+                <h3>モッタくん</h3>
+                <p>小さな違和感を見つけ、みんなの気づきを集める。</p>
+              </section>
+              <section class="mission-card">
+                <h3>ツナグくん</h3>
+                <p>人と人、アイデアと行動を軽やかにつなげる。</p>
+              </section>
+              <section class="mission-card">
+                <h3>タベルンくん</h3>
+                <p>食材の魅力を引き出し、最後までおいしく使い切る。</p>
+              </section>
+              <section class="mission-card">
+                <h3>イカス博士</h3>
+                <p>知識とデータで、暮らしの選択をわかりやすくする。</p>
+              </section>
+              <section class="mission-card">
+                <h3>ナナエルちゃん</h3>
+                <p>続ける気持ちを支え、今日の一歩を応援する。</p>
+              </section>
+              <section class="mission-card">
+                <h3>イロハちゃん</h3>
+                <p>未来を描き、行動の種を次の世代へ育てる。</p>
+              </section>
+            </div>
+          </div>
+        </article>
+
+        <article class="cm-scene cm-scene-5">
+          <div class="unite-scene">
+            <p class="cm-label">ひとりの気づきが、みんなの行動へ。</p>
+            <h2 class="cm-title">未来に向かって、Mottainai Seedsは団結する。</h2>
+            <div class="ring-team" aria-hidden="true">
+              <div class="future-seed"></div>
+              <div class="cm-character c1"><img src="images/Motta.png" alt=""></div>
+              <div class="cm-character c2"><img src="images/Tsunagu.png" alt=""></div>
+              <div class="cm-character c3"><img src="images/Taberun.png" alt=""></div>
+              <div class="cm-character c4"><img src="images/Ikasu.png" alt=""></div>
+              <div class="cm-character c5"><img src="images/Nanaeru.png" alt=""></div>
+              <div class="cm-character c6"><img src="images/Iroha.png" alt=""></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cm-scene cm-scene-6">
+          <div class="pantry-scene">
+            <div class="pantry-brand">
+              <img class="pantry-logo" src="images/app_logo.png" alt="Mottainai Pantry">
+              <p class="cm-label">Mottainai Seeds 第1弾アプリ</p>
+              <h2 class="cm-title">家庭の食品ロスを、今日から減らす。</h2>
+              <p class="cm-copy">食材を管理し、期限に気づき、AIレシピでおいしく使い切る。</p>
+              <div class="cm-button-row">
+                <a class="cm-cta" href="pantry.html">Mottainai Pantryを見る</a>
+                <a class="cm-cta secondary" href="download.html">ダウンロード情報へ</a>
+              </div>
+            </div>
+            <div class="phone-stack" aria-hidden="true">
+              <div class="phone-shot phone-shot-1"><img src="images/screenshot02_home.png" alt=""></div>
+              <div class="phone-shot phone-shot-2"><img src="images/screenshot03_ai_recipe.png" alt=""></div>
+              <div class="phone-shot phone-shot-3"><img src="images/screenshot04_statistics.png" alt=""></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="cm-progress" aria-hidden="true"></div>
+      </section>
+
+      <aside class="cm-controls" aria-label="CM操作">
+        <h1>Mottainai Seeds CM</h1>
+        <p>32秒ループのサイト掲載・SNS素材向けCMです。理念から入り、世界のもったいないへの気づき、キャラクターの団結、Mottainai Pantryへの導線までを1本にまとめています。</p>
+        <button class="cm-action" type="button" data-cm-restart>最初から再生</button>
+        <button class="cm-action secondary" type="button" data-cm-toggle>一時停止</button>
+        <ul class="cm-shot-list">
+          <li>0-5秒: Mottainai Seedsの理念</li>
+          <li>6-10秒: 世界のもったいないに気づく</li>
+          <li>11-16秒: 6人のキャラクター登場</li>
+          <li>17-22秒: それぞれの役割</li>
+          <li>23-27秒: 未来へ向かって団結</li>
+          <li>28-32秒: Mottainai Pantry CTA</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-tagline">© 2026 Mottainai Seeds</p>
+      <p class="footer-motto">Every small seed grows a better future.</p>
+      <p class="footer-note">Mottainai Pantry is the first app of the Mottainai Seeds project.</p>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="https://x.com/MottainaiSeeds" target="_blank" rel="noopener noreferrer">X</a>
+        <span class="footer-sep" aria-hidden="true">|</span>
+        <a href="mailto:mottainaiseeds@gmail.com">Contact</a>
+        <span class="footer-sep" aria-hidden="true">|</span>
+        <a href="pantry.html">Mottainai Pantry</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const stage = document.querySelector("#cmStage");
+    const restartButton = document.querySelector("[data-cm-restart]");
+    const toggleButton = document.querySelector("[data-cm-toggle]");
+
+    restartButton.addEventListener("click", () => {
+      stage.classList.remove("is-paused");
+      toggleButton.textContent = "一時停止";
+      stage.style.animation = "none";
+      stage.offsetHeight;
+      stage.style.animation = "";
+      stage.querySelectorAll("*").forEach((element) => {
+        element.style.animation = "none";
+        element.offsetHeight;
+        element.style.animation = "";
+      });
+    });
+
+    toggleButton.addEventListener("click", () => {
+      const paused = stage.classList.toggle("is-paused");
+      toggleButton.textContent = paused ? "再生" : "一時停止";
+    });
+  </script>
+</body>
+</html>
