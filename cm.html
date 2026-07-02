@@ -666,9 +666,23 @@
       .cm-shell {
         grid-template-columns: 1fr;
       }
+    }
 
+    @media (min-width: 761px) {
       .cm-stage {
-        min-height: 560px;
+        min-height: 680px;
+      }
+
+      .cm-title {
+        font-size: clamp(32px, 4.7vw, 60px);
+      }
+
+      .character-line {
+        min-height: 300px;
+      }
+
+      .ring-team {
+        width: min(44vw, 420px);
       }
     }
 
@@ -679,15 +693,20 @@
       }
 
       .cm-stage {
-        aspect-ratio: 9 / 16;
-        min-height: 660px;
-        max-height: none;
+        aspect-ratio: auto;
+        height: 640px;
+        min-height: 640px;
+        max-height: 640px;
         border-radius: 12px;
       }
 
       .cm-scene {
-        padding: 24px 16px 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        padding: 24px 16px 36px;
+        text-align: center;
       }
 
       .cm-logo-lockup {
@@ -757,45 +776,57 @@
       }
 
       .cm-characters .cm-title {
-        font-size: clamp(28px, 8.4vw, 42px);
-        line-height: 1.12;
-        max-width: 9em;
+        font-size: clamp(26px, 7.6vw, 34px);
+        line-height: 1.16;
+        max-width: 10em;
         margin-inline: auto;
       }
 
       .character-line {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        align-items: end;
-        justify-items: center;
-        gap: 12px 6px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px 8px;
+        width: 100%;
+        max-width: 360px;
+        margin: 24px auto 0;
         min-height: auto;
-        margin-top: 28px;
+        align-items: start;
+        justify-items: center;
       }
 
       .character-line .cm-character {
-        width: min(27vw, 94px);
-        max-width: 94px;
-        display: grid;
-        justify-items: center;
+        width: 86px;
+        max-width: 86px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .character-line .cm-character img {
+        width: 86px;
+        height: 100px;
+        object-fit: contain;
       }
 
       .character-line .cm-character strong {
         position: static;
         transform: none;
-        width: max-content;
-        max-width: 108px;
         margin-top: 4px;
-        padding: 4px 8px;
-        font-size: 11px;
-        line-height: 1.15;
+        width: auto;
+        max-width: 96px;
+        white-space: nowrap;
+        font-size: 10px;
+        line-height: 1.2;
+        padding: 4px 7px;
       }
 
       .mission-map {
         width: 100%;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 9px;
-        margin-top: 16px;
+        max-width: 360px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 18px auto 0;
       }
 
       .mission-card {
@@ -805,40 +836,67 @@
       }
 
       .mission-card h3 {
-        font-size: 15px;
+        font-size: 14px;
       }
 
       .mission-card p {
         margin-top: 5px;
-        font-size: 11px;
-        line-height: 1.36;
+        font-size: 10px;
+        line-height: 1.35;
       }
 
       .unite-scene .cm-title {
-        font-size: clamp(28px, 8vw, 38px);
-        max-width: 10em;
+        font-size: clamp(26px, 7.4vw, 34px);
+        line-height: 1.16;
+        max-width: 11em;
         margin-inline: auto;
       }
 
       .ring-team {
-        width: min(82vw, 330px);
-        margin-top: 18px;
+        width: min(68vw, 260px);
+        margin: 24px auto 0;
       }
 
       .ring-team .cm-character {
-        width: clamp(54px, 17vw, 72px);
+        width: 58px;
       }
 
-      .ring-team .c1 { top: -3%; }
-      .ring-team .c2 { right: 0; top: 25%; }
-      .ring-team .c3 { right: 12%; bottom: 1%; }
-      .ring-team .c4 { left: 12%; bottom: 1%; }
-      .ring-team .c5 { left: 0; top: 25%; }
-      .ring-team .c6 { top: 38%; width: clamp(60px, 19vw, 80px); }
+      .ring-team .c1 {
+        left: 50%;
+        top: -4%;
+        transform: translateX(-50%);
+      }
+
+      .ring-team .c2 {
+        right: -2%;
+        top: 24%;
+      }
+
+      .ring-team .c3 {
+        right: 10%;
+        bottom: 2%;
+      }
+
+      .ring-team .c4 {
+        left: 10%;
+        bottom: 2%;
+      }
+
+      .ring-team .c5 {
+        left: -2%;
+        top: 24%;
+      }
+
+      .ring-team .c6 {
+        left: 50%;
+        top: 39%;
+        transform: translateX(-50%);
+        width: 64px;
+      }
 
       .future-seed {
-        width: clamp(66px, 20vw, 92px);
-        border-width: 6px;
+        width: 72px;
+        border-width: 5px;
       }
 
       .phone-stack {
@@ -877,41 +935,9 @@
 
     @media (max-width: 420px) {
       .cm-stage {
-        min-height: 640px;
-      }
-
-      .cm-scene {
-        padding: 22px 12px 26px;
-      }
-
-      .cm-characters .cm-title {
-        font-size: clamp(26px, 8vw, 34px);
-      }
-
-      .character-line {
-        gap: 10px 4px;
-      }
-
-      .character-line .cm-character {
-        width: min(26vw, 82px);
-      }
-
-      .character-line .cm-character strong {
-        max-width: 96px;
-        padding-inline: 7px;
-        font-size: 10px;
-      }
-
-      .mission-card h3 {
-        font-size: 14px;
-      }
-
-      .mission-card p {
-        font-size: 10px;
-      }
-
-      .ring-team {
-        width: min(78vw, 300px);
+        height: 620px;
+        min-height: 620px;
+        max-height: 620px;
       }
     }
 
