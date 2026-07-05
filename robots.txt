@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shota625.github.io/MottainaiPantry-Web/sitemap.xml
+Sitemap: https://mottainai-seeds.github.io/MottainaiPantry-Web/sitemap.xml

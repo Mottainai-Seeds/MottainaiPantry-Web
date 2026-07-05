@@ -4,15 +4,15 @@
   <img src="images/app_logo.png" width="520" alt="Mottainai Pantry">
 </p>
 
-Mottainai Pantry の公式Webサイトです。
+Mottainai Pantry 縺ｮ蜈ｬ蠑集eb繧ｵ繧､繝医〒縺吶・
 
-家庭の食品ロスを減らすための Android アプリ「Mottainai Pantry」の紹介、プライバシーポリシー、利用規約、サポート情報を掲載します。
+螳ｶ蠎ｭ縺ｮ鬟溷刀繝ｭ繧ｹ繧呈ｸ帙ｉ縺吶◆繧√・ Android 繧｢繝励Μ縲勲ottainai Pantry縲阪・邏ｹ莉九√・繝ｩ繧､繝舌す繝ｼ繝昴Μ繧ｷ繝ｼ縲∝茜逕ｨ隕冗ｴ・√し繝昴・繝域ュ蝣ｱ繧呈軸霈峨＠縺ｾ縺吶・
 
 ## Website
 
 GitHub Pages:
 
-https://shota625.github.io/MottainaiPantry-Web/
+https://mottainai-seeds.github.io/MottainaiPantry-Web/
 
 ## Pages
 
@@ -47,12 +47,12 @@ https://shota625.github.io/MottainaiPantry-Web/
 
 ## Status
 
-現在は公開前αテスト中です。
+迴ｾ蝨ｨ縺ｯ蜈ｬ髢句燕ﾎｱ繝・せ繝井ｸｭ縺ｧ縺吶・
 
-- Android版を先行開発中
-- iOS版は将来的に検討予定
-- Google Play Billingは未実装
-- Supporter / Premium は今後対応予定
+- Android迚医ｒ蜈郁｡碁幕逋ｺ荳ｭ
+- iOS迚医・蟆・擂逧・↓讀懆ｨ惹ｺ亥ｮ・
+- Google Play Billing縺ｯ譛ｪ螳溯｣・
+- Supporter / Premium 縺ｯ莉雁ｾ悟ｯｾ蠢應ｺ亥ｮ・
 
 ## License
 
