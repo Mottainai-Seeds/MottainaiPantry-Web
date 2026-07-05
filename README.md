@@ -1,32 +1,59 @@
 # Mottainai Pantry Web
 
-`Mottainai Pantry Web` は、Androidアプリ `Mottainai Pantry` の公式Webサイトです。  
-プロジェクト紹介、ダウンロード案内、プライバシーポリシー、利用規約、サポート情報を掲載しています。
+## Overview
+
+`Mottainai Pantry Web` は、Androidアプリ `Mottainai Pantry` の公式Webサイトです。
+
+アプリの紹介、ダウンロード案内、FAQ、プライバシーポリシー、利用規約、サポート情報、更新履歴を公開するための静的サイトです。
 
 ## Official Site
 
 - [https://mottainai-seeds.github.io/MottainaiPantry-Web/](https://mottainai-seeds.github.io/MottainaiPantry-Web/)
 
-## Related App
+## Contents
 
-- [Mottainai Pantry](./pantry.html)
+- [Home](./index.html)
+- [About](./about.html)
+- [Download](./download.html)
+- [FAQ](./faq.html)
+- [Privacy Policy](./privacy.html)
+- [Terms of Service](./terms.html)
+- [Support](./support.html)
+- [Changelog](./changelog.html)
+
+## Related Projects
+
+- Mottainai Pantry: Android app
+- Android Repository: `https://github.com/Mottainai-Seeds/MottainaiPantry`
+- Mottainai Pantry-Web Repository: `https://github.com/Mottainai-Seeds/MottainaiPantry-Web`
+- GitHub Pages: `https://mottainai-seeds.github.io/MottainaiPantry-Web/`
+
+## About Mottainai Seeds
+
+`Mottainai Pantry` は、`Mottainai Seeds` ブランドの第一弾プロジェクトです。
+
+Mottainai Seeds は、「もったいない」を減らす小さな行動を増やすことを目的に、食品ロス削減や暮らしの改善につながるアプリとWebコンテンツを育てています。
 
 ## Development
 
 - Develop / Operate: `Mottainai Seeds`
 - Repository: `MottainaiPantry-Web`
-
-## Pages
-
-- [Home](./index.html)
-- [About](./about.html)
-- [Download](./download.html)
-- [Privacy](./privacy.html)
-- [Terms](./terms.html)
-- [Support](./support.html)
-- [FAQ](./faq.html)
-- [Changelog](./changelog.html)
+- Site type: Static website
 
 ## License
 
-TBD
+### Source Code
+
+MIT License
+
+### Brand Assets
+
+The following brand assets are owned and managed by `Mottainai Seeds`.
+
+- Logos
+- Characters
+- Illustrations
+- Screenshots
+- Icons
+
+Copyright © Mottainai Seeds. All rights reserved.
