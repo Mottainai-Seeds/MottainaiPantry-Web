@@ -56,4 +56,6 @@ The following brand assets are owned and managed by `Mottainai Seeds`.
 - Screenshots
 - Icons
 
+Mottainai Seeds develops applications and services that help people reduce everyday "mottainai" (waste) through small, meaningful actions.
+
 Copyright © Mottainai Seeds. All rights reserved.
