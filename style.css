@@ -130,6 +130,13 @@ main {
   height: auto;
 }
 
+.brand-hero-logo {
+  width: min(100%, 260px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .hero-brand {
   text-align: center;
   padding: 56px 0 48px;
@@ -190,6 +197,25 @@ main {
 .hero-visual img {
   width: 168px;
   height: 150px;
+  border-radius: 34px;
+  background: white;
+  align-self: flex-end;
+  box-shadow: 0 16px 32px rgba(47, 52, 55, 0.18);
+}
+
+.hero-visual .brand-hero-logo {
+  width: min(100%, 260px);
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  align-self: flex-end;
+}
+
+.hero-visual .app-hero-icon {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
   border-radius: 34px;
   background: white;
   align-self: flex-end;
