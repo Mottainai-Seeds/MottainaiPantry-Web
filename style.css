@@ -237,7 +237,8 @@ main {
   border-radius: 0;
   background: transparent;
   box-shadow: none;
-  align-self: flex-end;
+  align-self: center;
+  margin: 0 auto;
 }
 
 .hero-visual .app-hero-icon {
@@ -275,6 +276,10 @@ h1 {
   margin: 16px 0 10px;
   font-size: clamp(32px, 5vw, 54px);
   line-height: 1.18;
+}
+
+#hero-heading {
+  margin-top: 8px;
 }
 
 .page-title {
