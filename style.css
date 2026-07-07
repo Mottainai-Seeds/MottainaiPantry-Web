@@ -118,16 +118,44 @@ main {
   padding: 48px 24px 72px;
 }
 
+.brand-logo-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto 32px;
+}
+
+.brand-logo-block img {
+  max-width: 290px;
+  width: min(85%, 290px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.hero-logo {
+  max-width: 520px;
+  width: min(100%, 520px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 .logo-block {
   text-align: center;
   margin: 18px 0 36px;
 }
 
-.logo-block img,
-.hero-logo {
+.logo-block img {
   max-width: 520px;
   width: min(100%, 520px);
   height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 .brand-hero-logo {
@@ -549,6 +577,10 @@ hr {
   .screenshot-gallery,
   .screenshot-grid {
     grid-template-columns: 1fr;
+  }
+
+  .brand-logo-block img {
+    width: min(72%, 246px);
   }
 
   .screenshot-card,
