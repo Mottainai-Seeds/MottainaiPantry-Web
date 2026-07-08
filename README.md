@@ -10,6 +10,10 @@
 
 - [https://mottainai-seeds.github.io/MottainaiPantry-Web/](https://mottainai-seeds.github.io/MottainaiPantry-Web/)
 
+## Current Status
+
+The site reflects the Android app v1.0.1 closed test feedback updates, including improvements to backup/restore, shopping list, custom categories, statistics, and barcode guidance.
+
 ## Contents
 
 - [Home](./index.html)
