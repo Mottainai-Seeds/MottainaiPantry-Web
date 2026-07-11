@@ -126,6 +126,27 @@ main {
   margin: 0 auto 32px;
 }
 
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.language-switcher a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.language-switcher a:hover,
+.language-switcher a[aria-current="page"] {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .brand-logo-block img {
   max-width: 290px;
   width: min(85%, 290px);
@@ -539,6 +560,11 @@ hr {
 }
 
 @media (max-width: 960px) {
+  .language-switcher {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
   .hero {
     grid-template-columns: 1fr;
     padding-top: 28px;
