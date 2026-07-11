@@ -12,7 +12,7 @@
 
 ## Current Status
 
-The site reflects the Android app v1.0.2 closed test updates, including AI recipe flow, ChatGPT / Gemini multilingual support, saved recipes, local candidates, avoid ingredients, barcode guidance, statistics fixes, and backup reminders.
+The site reflects the Android app v1.0.3 release-candidate updates, including AI recipe flow, ChatGPT / Gemini multilingual support, saved recipes, local candidates, avoid ingredients, barcode guidance, statistics fixes, backup reminders, and localized screenshots.
 
 ## Contents
 

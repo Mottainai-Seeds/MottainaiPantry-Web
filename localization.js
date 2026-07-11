@@ -1,6 +1,6 @@
 (() => {
   const page = location.pathname.split('/').pop() || 'index.html';
-  const supported = new Set(['index.html', 'pantry.html', 'download.html', 'faq.html', 'about.html', 'support.html', 'privacy.html', 'terms.html']);
+  const supported = new Set(['index.html', 'pantry.html', 'download.html', 'faq.html', 'about.html', 'characters.html', 'support.html', 'privacy.html', 'terms.html']);
   const target = supported.has(page) ? page : 'index.html';
   const depth = location.pathname.includes('/en/') || location.pathname.includes('/zh-cn/');
   const root = depth ? '../' : '';

@@ -3,111 +3,99 @@
 
 ---
 
-## Screenshot 1
+## v1.0.3 スクリーンショット構成
+
+### Screenshot 1
 
 ファイル名
 
 ```text
-screenshot01_onboarding.png
+images/screenshots/ja/01_home.jpg
 ```
 
 タイトル
 
 ```text
-今日からフードロス削減
+ホーム
 ```
 
 説明
 
 ```text
-賞味期限をかんたん管理。
-食材をムダなく使い切る習慣を始めましょう。
+食材をまとめて管理
 ```
 
 ---
 
-## Screenshot 2
+### Screenshot 2
 
 ファイル名
 
 ```text
-screenshot02_home.png
+images/screenshots/ja/02_ai_recipe.jpg
 ```
 
 タイトル
 
 ```text
-登録は最短数秒
+AIレシピ提案
 ```
 
 説明
 
 ```text
-手入力・バーコード・賞味期限撮影に対応。
-Open Food Facts の参照や上書き確認もわかりやすく改善しました。
+期限が近い食材を活用したレシピをAIが提案
 ```
 
 ---
 
-## Screenshot 3
+### Screenshot 3
 
 ファイル名
 
 ```text
-screenshot03_ai_recipe.png
+images/screenshots/ja/03_photo_import.jpg
 ```
 
 タイトル
 
 ```text
-AIが献立を提案
+写真でまとめて取込
 ```
 
 説明
 
 ```text
-冷蔵庫の食材を活かしたレシピを、
-ChatGPT・Geminiで多言語対応のまま簡単提案。
-保存済みレシピ、ローカル候補、避けたい食材にも対応します。
+写真から複数の食材をAIがまとめて認識
 ```
 
 ---
 
-## Screenshot 4
+### Screenshot 4
 
 ファイル名
 
 ```text
-screenshot04_statistics.png
+images/screenshots/ja/04_statistics.jpg
 ```
 
 タイトル
 
 ```text
-フードロスを見える化
+統計
 ```
 
 説明
 
 ```text
-フードロスの推移をグラフで確認。
-カテゴリ重複を修正し、単位順やカテゴリアイコンも見やすく整えました。
+食品ロスを見える化
 ```
 
 ---
 
 ## 構成メモ
 
-- 1枚目は導入
-- 2枚目は入力のしやすさ
-- 3枚目はAIレシピ導線
-- 4枚目は統計と継続利用
-
----
-
-## v1.0.2 メモ
-
-- 複数言語対応を v1.0.2 で整理
-- ChatGPT / Gemini / Mock を案内
-- 保存済みレシピ、ローカル候補、避けたい食材を案内
-- バックアップ14日通知を案内
+- 1枚目はホーム
+- 2枚目はAIレシピ提案
+- 3枚目は写真からの一括取込
+- 4枚目は統計
