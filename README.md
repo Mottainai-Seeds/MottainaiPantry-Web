@@ -12,7 +12,7 @@
 
 ## Current Status
 
-The site reflects the Android app v1.0.3 release-candidate updates, including AI recipe flow, ChatGPT / Gemini multilingual support, saved recipes, local candidates, avoid ingredients, barcode guidance, statistics fixes, backup reminders, and localized screenshots.
+The site reflects the Android app v1.1.0 release-candidate updates, including the Home dashboard, quick food entry from Home, statistics-to-Home filtering, and backup/restore verification. The distribution remains Google Play Closed Testing; Mottainai Premium and Local AI are not currently available.
 
 ## Contents
 

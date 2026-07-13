@@ -1,4 +1,4 @@
-# Mottainai Pantry v1.0.3 截图构成
+# Mottainai Pantry v1.1.0 截图构成
 
 Google Play掲載時は以下の順序を使用します。
 
