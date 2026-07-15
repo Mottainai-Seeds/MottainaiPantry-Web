@@ -12,7 +12,7 @@
 
 ## Current Status
 
-The site reflects the Android app v1.1.0 release-candidate updates, including the Home dashboard, quick food entry from Home, statistics-to-Home filtering, and backup/restore verification. The distribution remains Google Play Closed Testing; Mottainai Premium and Local AI are not currently available.
+The site reflects the Android app v1.2.0 release, including guided onboarding, reusable tutorials, improved Japanese/English/Simplified Chinese localization, opened-state controls on food cards, and refined Bottom Navigation. The distribution remains Google Play Closed Testing; Mottainai Premium and Local AI are not currently available.
 
 ## Contents
 
