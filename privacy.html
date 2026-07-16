@@ -63,8 +63,12 @@
     <section class="card legal-prose">
       <p>本プライバシーポリシーは、Mottainai Seedsが提供するAndroidアプリ「Mottainai Pantry」（以下「本アプリ」）における個人情報および利用データの取り扱いについて定めるものです。</p>
       <p>本アプリは、登録された食材情報・レシピ情報・保存済みレシピ・設定情報を原則として端末内に保存します。</p>
-      <p>AI機能を利用する場合、ユーザーが設定画面で入力したAPIキーを使って、選択した外部AIサービス（OpenAI、Google Gemini等）にリクエストが送信されます。入力された食材名等の情報が外部サービスへ送信される可能性があります。</p>
-      <p>APIキーは端末内のAndroid Keystoreを用いて暗号化保存を行います。アプリ開発者がユーザーのAPIキーや食材データを収集・保存することはありません。AI利用料は各AIサービスの料金体系に従い、ユーザー自身の負担となります。</p>
+      <h2>AI機能と外部AIサービス</h2>
+      <p>AIレシピ提案は任意機能です。利用する場合は、設定で選択した外部AIサービス（OpenAIまたはGoogle Gemini）へ、レシピ生成に必要な食材名、カテゴリ、数量・単位、期限、保存場所、開封状態、メモ、避けたい食材、レシピ言語および生成用プロンプトが送信されます。</p>
+      <p>メモなどに不要な個人情報を入力しないでください。本アプリは、アカウント情報、支払情報、連絡先などをAIレシピ提案のために送信するものではありません。ただし、利用者が食材名やメモに入力した内容は、生成用プロンプトに含まれる場合があります。</p>
+      <h2>APIキーと外部サービス</h2>
+      <p>APIキーはAndroid Keystoreの鍵で端末内に暗号化保存され、バックアップJSONやアプリのログには含めません。APIキーは選択したAIサービスへの認証にのみ使用され、アプリ開発者が収集・保存することはありません。AI利用料は各AIサービスの料金体系に従い、ユーザー自身の負担となります。</p>
+      <p>外部AIサービスのデータ取扱いには、各サービスのポリシーと利用規約が適用されます。<a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer">OpenAI Privacy Policy</a>、<a href="https://openai.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer">OpenAI Terms of Use</a>、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>、<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener noreferrer">Gemini API Terms</a>をご確認ください。</p>
       <p>CSVエクスポート・インポート、バックアップ・リストアはユーザー自身の責任で管理してください。</p>
     </section>
 
