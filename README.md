@@ -12,7 +12,7 @@
 
 ## Current Status
 
-The site reflects the Android app v1.2.0 release, including guided onboarding, reusable tutorials, improved Japanese/English/Simplified Chinese localization, opened-state controls on food cards, and refined Bottom Navigation. The distribution remains Google Play Closed Testing; Mottainai Premium and Local AI are not currently available.
+The site reflects the Android app v1.2.1 release, including more stable AI recipe suggestions, broader ingredient consideration, generated-model labels, and refined photo import, history restore, and deadline actions. The distribution remains Google Play Closed Testing; Mottainai Premium and Local AI are not currently available.
 
 ## Contents
 
