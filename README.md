@@ -12,7 +12,7 @@
 
 ## Current Status
 
-The site reflects the Android app v1.2.1 release, including more stable AI recipe suggestions, broader ingredient consideration, generated-model labels, and refined photo import, history restore, and deadline actions. The distribution remains Google Play Closed Testing; Mottainai Premium and Local AI are not currently available.
+The site reflects the Android app v1.2.2 release, including restored Fruit and new Bread categories with their icons, clearer AI recipe generation feedback, updated Google Play Billing compatibility, broader ingredient consideration, generated-model labels, and refined history restore. The distribution remains Google Play Closed Testing; Mottainai Premium and Local AI are not currently available.
 
 ## Contents
 
